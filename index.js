@@ -32,7 +32,10 @@ if (process.env.NODE_ENV !== "test") {
 app.use(helmet());
 app.use(
   cors({
-    origin: "https://frontend-omega-sepia-paq2p9fao4.vercel.app",
+    origin: [
+      "https://frontend-73gdcm4am-chaithanyareddy322s-projects.vercel.app"
+    ],
+    credentials: true
   }),
 );
 app.use(expressLayouts);
