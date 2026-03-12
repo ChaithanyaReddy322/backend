@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: backend-app
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      # The following values should be set via the dashboard or CLI
+      # - key: MONGO_URI
+      #   fromSecret: MONGO_URI
+      # - key: SESSION_SECRET
+      #   fromSecret: SESSION_SECRET
