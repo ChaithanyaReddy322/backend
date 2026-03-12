@@ -30,7 +30,11 @@ if (process.env.NODE_ENV !== "test") {
 }
 
 app.use(helmet());
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://frontend-omega-sepia-paq2p9fao4.vercel.app",
+  }),
+);
 app.use(expressLayouts);
 app.set("view engine", "ejs");
 app.set("views", "views");
