@@ -30,14 +30,7 @@ if (process.env.NODE_ENV !== "test") {
 }
 
 app.use(helmet());
-app.use(
-  cors({
-    origin: [
-      "https://frontend-73gdcm4am-chaithanyareddy322s-projects.vercel.app"
-    ],
-    credentials: true
-  }),
-);
+app.use(cors());
 app.use(expressLayouts);
 app.set("view engine", "ejs");
 app.set("views", "views");
