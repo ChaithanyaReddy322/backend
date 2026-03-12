@@ -39,6 +39,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 
+// serve images
+app.use("/images", express.static("public/images"));
+
 app.use(
   session({
     secret: process.env.SESSION_SECRET || "change_this_in_prod",
